@@ -7,9 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
+      html{
+        height: 100%;
+      }
       .slide {
         display: none;
-        height: 100vh;
+        min-height: 100dvh;
         padding: 2rem;
         animation: fadeEffect 1s;
       }
@@ -52,7 +55,7 @@
       }
     </style>
   </head>
-  <body class="bg-gray-100 font-sans">
+  <body class="bg-gray-100 font-sans h-full">
     <!-- Navigation Controls -->
     <div class="controls">
       <button
@@ -211,13 +214,14 @@
         </article>
         <article class="bg-white p-6 rounded-lg shadow-md md:col-span-2">
           <h3 class="text-xl font-semibold text-blue-600 mb-3">
-            Objetivos del Proceso
+            Diagrama de Entidad-Relación
           </h3>
-          <div class="grid grid-cols-2 gap-4 text-gray-700">
-            <p>• Organizar la información</p>
-            <p>• Estructurar los datos</p>
-            <p>• Definir relaciones</p>
-            <p>• Validar la integridad</p>
+          <div class="flex justify-center">
+            <img
+              src="./assets/entity-relation.png"
+              alt="Diagrama de Entidad-Relación"
+              class="max-w-full h-auto"
+            />
           </div>
         </article>
       </main>
@@ -236,36 +240,87 @@
       <main class="flex-grow grid grid-cols-1 gap-6">
         <article class="bg-white p-6 rounded-lg shadow-md">
           <h3 class="text-xl font-semibold text-blue-600 mb-3">
-            Arquitectura en Capas
+            Diagrama de componentes
           </h3>
           <div class="flex flex-col space-y-4 mt-4">
-            <div class="bg-blue-100 p-4 rounded text-center font-medium">
-              Capa de Presentación
-            </div>
-            <div class="bg-blue-200 p-4 rounded text-center font-medium">
-              Capa de Aplicación
-            </div>
-            <div class="bg-blue-300 p-4 rounded text-center font-medium">
-              Capa de Datos
-            </div>
+            <img
+              src="./assets/diagrama-componentes.png"
+              alt="Diagrama de componentes"
+              class="max-w-full h-auto"
+            />
           </div>
         </article>
         <article class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold text-blue-600 mb-3">
-            Componentes Principales
-          </h3>
+          <h3 class="text-xl font-semibold text-blue-600 mb-3">Componente Principal</h3>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-gray-700">
             <div class="bg-gray-100 p-3 rounded">
-              Módulo de Gestión de Donantes
+              <p class="text-lg font-semibold">
+                Sistema de Gestión Fundación Ayuda Mutua
+              </p>
+              <p class="text-sm">
+                Es el componente principal que engloba todo el sistema.
+              </p>
+            </div>
+        </article>
+        <article class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold text-blue-600 mb-3">Componentes internos</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-gray-700">
+            <div class="bg-gray-100 p-3 rounded">
+              <p class="text-lg font-semibold">
+                Gestión de Donantes
+              </p>
+              <p class="text-sm">
+                Componente encargado de la creación, consulta, modificación y eliminación de la información de los donantes.
+              </p>
             </div>
             <div class="bg-gray-100 p-3 rounded">
-              Módulo de Gestión de Eventos
+              <p class="text-lg font-semibold">
+                Gestión de Donaciones
+              </p>
+              <p class="text-sm">
+                Componente encargado del registro y gestión de las donaciones.
+              </p>
             </div>
             <div class="bg-gray-100 p-3 rounded">
-              Módulo de Gestión de Usuarios
+              <p class="text-lg font-semibold">
+                Gestión de Eventos
+              </p>
+              <p class="text-sm">
+                Componente encargado de la planificación, organización y seguimiento de eventos.
+              </p>
             </div>
-            <div class="bg-gray-100 p-3 rounded">Módulo de Reportes</div>
-            <div class="bg-gray-100 p-3 rounded">Módulo de Seguridad</div>
+            <div class="bg-gray-100 p-3 rounded">
+              <p class="text-lg font-semibold">
+                Gestión de Usuarios
+              </p>
+              <p class="text-sm">
+                Componente encargado de la gestión de usuarios, roles y permisos de acceso.
+              </p>
+            </div>
+            <div class="bg-gray-100 p-3 rounded">
+              <p class="text-lg font-semibold">
+                Generación de Reportes
+              </p>
+              <p class="text-sm">
+                Componente encargado de la generación de reportes e informes.
+              </p>
+            </div>
+            <div class="bg-gray-100 p-3 rounded">
+              <p class="text-lg font-semibold">
+                Auditoría
+              </p>
+              <p class="text-sm">
+                Componente encargado del registro de las actividades de los usuarios.
+              </p>
+            </div>
+            <div class="bg-gray-100 p-3 rounded">
+              <p class="text-lg font-semibold">
+                Base de Datos
+              </p>
+              <p class="text-sm">
+                Componente encargado del almacenamiento y acceso a los datos.
+              </p>
+            </div>
           </div>
         </article>
       </main>
@@ -306,17 +361,17 @@
         </article>
         <article class="bg-white p-6 rounded-lg shadow-md md:col-span-2">
           <h3 class="text-xl font-semibold text-blue-600 mb-3">
-            Proceso de Diseño
+            Wireframes
           </h3>
           <div
-            class="grid grid-cols-2 md:grid-cols-3 gap-3 text-gray-700 text-sm"
+            class="flex justify-center w-full"
           >
-            <div class="bg-gray-50 p-2 rounded">Elementos funcionales</div>
-            <div class="bg-gray-50 p-2 rounded">Limitaciones del sistema</div>
-            <div class="bg-gray-50 p-2 rounded">Perfil del usuario</div>
-            <div class="bg-gray-50 p-2 rounded">Posibles fallos</div>
-            <div class="bg-gray-50 p-2 rounded">Aplicación del sistema</div>
-            <div class="bg-gray-50 p-2 rounded">Usabilidad de la interfaz</div>
+            <img
+              src="./assets/wireframes-ong.svg"
+              alt="Wireframes ayuda mutua"
+              class="max-w-full h-auto"
+            />
+            <img
           </div>
         </article>
       </main>
@@ -332,7 +387,19 @@
           Diseño de Despliegue
         </h2>
       </header>
-      <main class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-6">
+      <main class="flex-grow grid grid-cols-1 gap-6">
+        <article class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold text-blue-600 mb-3">
+            Diagrama de despliegue
+          </h3>
+          <div class="flex flex-col space-y-4 mt-4">
+            <img
+              src="./assets/despliegue.png"
+              alt="Diagrama de despliegue"
+              class="max-w-full h-auto"
+            />
+          </div>
+        </article>
         <article class="bg-white p-6 rounded-lg shadow-md">
           <h3 class="text-xl font-semibold text-blue-600 mb-3">
             Estrategia de Implementación
@@ -343,36 +410,6 @@
             <li>Capacitación y soporte</li>
             <li>Pruebas y validación</li>
           </ul>
-        </article>
-        <article
-          class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center"
-        >
-          <div class="w-full">
-            <h3 class="text-xl font-semibold text-blue-600 mb-3 text-center">
-              Diagrama de Despliegue
-            </h3>
-            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-              <!-- Simplified deployment diagram -->
-              <div class="flex flex-col items-center space-y-4">
-                <div class="bg-blue-100 p-3 rounded w-full text-center">
-                  Dispositivos del Usuario
-                </div>
-                <div class="h-6 border-l-2 border-gray-400"></div>
-                <div class="bg-green-100 p-3 rounded w-full text-center">
-                  Servidor de Aplicación
-                </div>
-                <div class="h-6 border-l-2 border-gray-400"></div>
-                <div class="bg-yellow-100 p-3 rounded w-full text-center">
-                  Servidor de Base de Datos
-                </div>
-                <div
-                  class="w-full border-t-2 border-gray-400 mt-2 pt-2 text-center text-sm text-gray-500"
-                >
-                  Red
-                </div>
-              </div>
-            </div>
-          </div>
         </article>
       </main>
     </section>
@@ -390,58 +427,14 @@
       <main class="flex-grow">
         <div class="bg-white p-6 rounded-lg shadow-md h-full">
           <h3 class="text-xl font-semibold text-blue-600 mb-4 text-center">
-            Diagrama de Flujo de Datos - Nivel 1
+            Diagrama de Flujo
           </h3>
           <div class="flex justify-center">
-            <div class="w-full max-w-4xl">
-              <!-- Simplified DFD Level 1 diagram -->
-              <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
-                <!-- External entities -->
-                <div class="bg-gray-100 p-3 rounded text-center">Donantes</div>
-                <div class="bg-gray-100 p-3 rounded text-center">
-                  Voluntarios
-                </div>
-                <div class="bg-gray-100 p-3 rounded text-center">
-                  Administradores
-                </div>
-              </div>
-
-              <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
-                <!-- Main processes -->
-                <div class="bg-blue-100 p-4 rounded-full text-center">
-                  Gestión de Donantes
-                </div>
-                <div class="bg-blue-100 p-4 rounded-full text-center">
-                  Gestión de Donaciones
-                </div>
-                <div class="bg-blue-100 p-4 rounded-full text-center">
-                  Gestión de Eventos
-                </div>
-                <div class="bg-blue-100 p-4 rounded-full text-center">
-                  Gestión de Usuarios
-                </div>
-                <div class="bg-blue-100 p-4 rounded-full text-center">
-                  Generación de Reportes
-                </div>
-                <div class="bg-blue-100 p-4 rounded-full text-center">
-                  Auditoría
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Data stores -->
-                <div
-                  class="bg-green-100 p-3 rounded text-center border-l-4 border-r-4 border-green-300"
-                >
-                  Base de Datos de Donantes
-                </div>
-                <div
-                  class="bg-green-100 p-3 rounded text-center border-l-4 border-r-4 border-green-300"
-                >
-                  Base de Datos de Eventos
-                </div>
-              </div>
-            </div>
+            <img
+              src="./assets/arquitectonico.png"
+              alt="Diagrama de flujo"
+              class="max-w-full h-auto"
+            />
           </div>
         </div>
       </main>

@@ -1,0 +1,288 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1700">
+  <!-- Estilos generales -->
+  <style>
+    .screen { fill: #f5f5f5; stroke: #000; stroke-width: 2; }
+    .title { font-family: Arial; font-size: 20px; font-weight: bold; }
+    .subtitle { font-family: Arial; font-size: 16px; font-weight: bold; }
+    .label { font-family: Arial; font-size: 14px; }
+    .field { fill: white; stroke: #777; stroke-width: 1; }
+    .button { fill: #ddd; stroke: #777; stroke-width: 1; rx: 5; ry: 5; }
+    .primary-button { fill: #4a86e8; stroke: #3a76d8; stroke-width: 1; rx: 5; ry: 5; }
+    .button-text { font-family: Arial; font-size: 14px; text-anchor: middle; fill: #000; }
+    .primary-button-text { font-family: Arial; font-size: 14px; text-anchor: middle; fill: white; font-weight: bold; }
+    .table { fill: white; stroke: #777; stroke-width: 1; }
+    .table-header { fill: #e6e6e6; stroke: #777; stroke-width: 1; }
+    .calendar-day { fill: white; stroke: #777; stroke-width: 1; }
+    .calendar-header { fill: #e6e6e6; stroke: #777; stroke-width: 1; }
+    .event { fill: #d9ead3; stroke: #93c47d; stroke-width: 1; rx: 2; ry: 2; }
+    .link { font-family: Arial; font-size: 12px; fill: #4a86e8; text-decoration: underline; }
+  </style>
+
+  <!-- Pantalla de Inicio de Sesión -->
+  <g transform="translate(20, 20)">
+    <rect x="0" y="0" width="460" height="340" class="screen"/>
+    <text x="230" y="40" class="title" text-anchor="middle">Inicio de Sesión</text>
+
+    <text x="80" y="100" class="label">Usuario:</text>
+    <rect x="80" y="110" width="300" height="30" class="field"/>
+
+    <text x="80" y="180" class="label">Contraseña:</text>
+    <rect x="80" y="190" width="300" height="30" class="field"/>
+
+    <rect x="180" y="250" width="140" height="40" class="primary-button"/>
+    <text x="250" y="275" class="primary-button-text">Iniciar Sesión</text>
+
+    <text x="230" y="320" class="link" text-anchor="middle">¿Olvidó su contraseña?</text>
+  </g>
+
+  <!-- Pantalla de Registro de Donantes -->
+  <g transform="translate(520, 20)">
+    <rect x="0" y="0" width="460" height="620" class="screen"/>
+    <text x="230" y="40" class="title" text-anchor="middle">Registro de Donantes</text>
+
+    <text x="40" y="80" class="subtitle">Información Personal</text>
+
+    <text x="40" y="120" class="label">Nombre:</text>
+    <rect x="40" y="130" width="180" height="30" class="field"/>
+
+    <text x="240" y="120" class="label">Apellidos:</text>
+    <rect x="240" y="130" width="180" height="30" class="field"/>
+
+    <text x="40" y="180" class="label">Correo Electrónico:</text>
+    <rect x="40" y="190" width="380" height="30" class="field"/>
+
+    <text x="40" y="240" class="label">Teléfono:</text>
+    <rect x="40" y="250" width="180" height="30" class="field"/>
+
+    <text x="40" y="300" class="subtitle">Dirección</text>
+
+    <text x="40" y="340" class="label">Calle:</text>
+    <rect x="40" y="350" width="380" height="30" class="field"/>
+
+    <text x="40" y="400" class="label">Ciudad:</text>
+    <rect x="40" y="410" width="180" height="30" class="field"/>
+
+    <text x="240" y="400" class="label">Código Postal:</text>
+    <rect x="240" y="410" width="180" height="30" class="field"/>
+
+    <text x="40" y="460" class="subtitle">Preferencias de Comunicación</text>
+
+    <rect x="40" y="480" width="15" height="15" class="field"/>
+    <text x="65" y="493" class="label">Correo Electrónico</text>
+
+    <rect x="40" y="510" width="15" height="15" class="field"/>
+    <text x="65" y="523" class="label">Llamada Telefónica</text>
+
+    <rect x="40" y="540" width="15" height="15" class="field"/>
+    <text x="65" y="553" class="label">SMS</text>
+
+    <rect x="280" y="560" width="100" height="40" class="button"/>
+    <text x="330" y="585" class="button-text">Cancelar</text>
+
+    <rect x="100" y="560" width="160" height="40" class="primary-button"/>
+    <text x="180" y="585" class="primary-button-text">Guardar Donante</text>
+  </g>
+
+  <!-- Pantalla de Gestión de Donaciones -->
+  <g transform="translate(20, 380)">
+    <rect x="0" y="0" width="460" height="520" class="screen"/>
+    <text x="230" y="40" class="title" text-anchor="middle">Gestión de Donaciones</text>
+
+    <rect x="40" y="70" width="170" height="40" class="primary-button"/>
+    <text x="125" y="95" class="primary-button-text">Registrar Donación</text>
+
+    <text x="40" y="140" class="subtitle">Filtros</text>
+
+    <text x="40" y="170" class="label">Desde:</text>
+    <rect x="90" y="160" width="120" height="25" class="field"/>
+
+    <text x="230" y="170" class="label">Hasta:</text>
+    <rect x="280" y="160" width="120" height="25" class="field"/>
+
+    <text x="40" y="210" class="label">Donante:</text>
+    <rect x="110" y="200" width="290" height="25" class="field"/>
+
+    <rect x="370" y="240" width="30" height="30" class="button"/>
+    <text x="385" y="260" class="button-text">🔍</text>
+
+    <text x="40" y="290" class="subtitle">Historial de Donaciones</text>
+
+    <!-- Tabla de donaciones -->
+    <rect x="40" y="310" width="380" height="30" class="table-header"/>
+    <text x="70" y="330" class="label">Fecha</text>
+    <text x="160" y="330" class="label">Donante</text>
+    <text x="270" y="330" class="label">Cantidad</text>
+    <text x="360" y="330" class="label">Tipo</text>
+
+    <rect x="40" y="340" width="380" height="30" class="table"/>
+    <text x="70" y="360" class="label">12/03/2025</text>
+    <text x="160" y="360" class="label">Maria López</text>
+    <text x="270" y="360" class="label">$500</text>
+    <text x="360" y="360" class="label">Efectivo</text>
+
+    <rect x="40" y="370" width="380" height="30" class="table"/>
+    <text x="70" y="390" class="label">10/03/2025</text>
+    <text x="160" y="390" class="label">Juan Pérez</text>
+    <text x="270" y="390" class="label">$750</text>
+    <text x="360" y="390" class="label">Transferencia</text>
+
+    <rect x="40" y="400" width="380" height="30" class="table"/>
+    <text x="70" y="420" class="label">05/03/2025</text>
+    <text x="160" y="420" class="label">Ana Martínez</text>
+    <text x="270" y="420" class="label">$1000</text>
+    <text x="360" y="420" class="label">Cheque</text>
+
+    <rect x="40" y="430" width="380" height="30" class="table"/>
+    <text x="70" y="450" class="label">28/02/2025</text>
+    <text x="160" y="450" class="label">Carlos Ruiz</text>
+    <text x="270" y="450" class="label">$300</text>
+    <text x="360" y="450" class="label">Efectivo</text>
+
+    <!-- Paginación -->
+    <text x="180" y="490" class="label" text-anchor="middle">Página 1 de 4</text>
+    <text x="130" y="490" class="link">Anterior</text>
+    <text x="230" y="490" class="link">Siguiente</text>
+  </g>
+
+  <!-- Pantalla de Planificación de Eventos -->
+  <g transform="translate(520, 660)">
+    <rect x="0" y="0" width="460" height="520" class="screen"/>
+    <text x="230" y="40" class="title" text-anchor="middle">Planificación de Eventos</text>
+
+    <rect x="40" y="70" width="170" height="40" class="primary-button"/>
+    <text x="125" y="95" class="primary-button-text">Crear Evento</text>
+
+    <text x="40" y="140" class="subtitle">Calendario - Marzo 2025</text>
+
+    <!-- Calendario -->
+    <rect x="40" y="160" width="380" height="30" class="calendar-header"/>
+    <text x="65" y="180" class="label">Lun</text>
+    <text x="115" y="180" class="label">Mar</text>
+    <text x="165" y="180" class="label">Mié</text>
+    <text x="215" y="180" class="label">Jue</text>
+    <text x="265" y="180" class="label">Vie</text>
+    <text x="315" y="180" class="label">Sáb</text>
+    <text x="365" y="180" class="label">Dom</text>
+
+    <!-- Semana 1 -->
+    <rect x="40" y="190" width="54" height="50" class="calendar-day"/>
+    <text x="50" y="210" class="label">1</text>
+
+    <rect x="94" y="190" width="54" height="50" class="calendar-day"/>
+    <text x="104" y="210" class="label">2</text>
+
+    <rect x="148" y="190" width="54" height="50" class="calendar-day"/>
+    <text x="158" y="210" class="label">3</text>
+
+    <rect x="202" y="190" width="54" height="50" class="calendar-day"/>
+    <text x="212" y="210" class="label">4</text>
+
+    <rect x="256" y="190" width="54" height="50" class="calendar-day"/>
+    <text x="266" y="210" class="label">5</text>
+
+    <rect x="310" y="190" width="54" height="50" class="calendar-day"/>
+    <text x="320" y="210" class="label">6</text>
+
+    <rect x="364" y="190" width="56" height="50" class="calendar-day"/>
+    <text x="374" y="210" class="label">7</text>
+
+    <!-- Semana 2 -->
+    <rect x="40" y="240" width="54" height="50" class="calendar-day"/>
+    <text x="50" y="260" class="label">8</text>
+
+    <rect x="94" y="240" width="54" height="50" class="calendar-day"/>
+    <text x="104" y="260" class="label">9</text>
+
+    <rect x="148" y="240" width="54" height="50" class="calendar-day"/>
+    <text x="158" y="260" class="label">10</text>
+
+    <rect x="202" y="240" width="54" height="50" class="calendar-day"/>
+    <text x="212" y="260" class="label">11</text>
+
+    <rect x="256" y="240" width="54" height="50" class="calendar-day"/>
+    <text x="266" y="260" class="label">12</text>
+    <!-- Evento -->
+    <rect x="259" y="270" width="48" height="15" class="event"/>
+    <text x="283" y="282" class="label" font-size="8" text-anchor="middle">Reunión</text>
+
+    <rect x="310" y="240" width="54" height="50" class="calendar-day"/>
+    <text x="320" y="260" class="label">13</text>
+
+    <rect x="364" y="240" width="56" height="50" class="calendar-day"/>
+    <text x="374" y="260" class="label">14</text>
+
+    <!-- Próximos eventos -->
+    <text x="40" y="330" class="subtitle">Próximos Eventos</text>
+
+    <rect x="40" y="350" width="380" height="60" class="table"/>
+    <text x="50" y="370" class="label" font-weight="bold">Reunión de Voluntarios</text>
+    <text x="50" y="390" class="label">12/03/2025 - 18:00hs</text>
+    <text x="50" y="405" class="label">Sala de Conferencias</text>
+    <rect x="360" y="365" width="50" height="30" class="button"/>
+    <text x="385" y="385" class="button-text" font-size="12">Editar</text>
+
+    <rect x="40" y="420" width="380" height="60" class="table"/>
+    <text x="50" y="440" class="label" font-weight="bold">Campaña de Recaudación</text>
+    <text x="50" y="460" class="label">20/03/2025 - 10:00hs</text>
+    <text x="50" y="475" class="label">Plaza Central</text>
+    <rect x="360" y="435" width="50" height="30" class="button"/>
+    <text x="385" y="455" class="button-text" font-size="12">Editar</text>
+  </g>
+
+  <!-- Modal para Registrar Nueva Donación -->
+  <g transform="translate(20, 920)">
+    <rect x="0" y="0" width="460" height="400" class="screen"/>
+    <text x="230" y="40" class="title" text-anchor="middle">Registrar Nueva Donación</text>
+
+    <text x="40" y="80" class="label">Donante:</text>
+    <rect x="40" y="90" width="380" height="30" class="field"/>
+
+    <text x="40" y="140" class="label">Fecha:</text>
+    <rect x="40" y="150" width="180" height="30" class="field"/>
+
+    <text x="240" y="140" class="label">Cantidad:</text>
+    <rect x="240" y="150" width="180" height="30" class="field"/>
+
+    <text x="40" y="200" class="label">Tipo de Donación:</text>
+    <rect x="40" y="210" width="380" height="30" class="field"/>
+
+    <text x="40" y="260" class="label">Comentarios:</text>
+    <rect x="40" y="270" width="380" height="60" class="field"/>
+
+    <rect x="280" y="340" width="100" height="40" class="button"/>
+    <text x="330" y="365" class="button-text">Cancelar</text>
+
+    <rect x="100" y="340" width="160" height="40" class="primary-button"/>
+    <text x="180" y="365" class="primary-button-text">Guardar Donación</text>
+  </g>
+
+  <!-- Modal para Crear Nuevo Evento -->
+  <g transform="translate(520, 1200)">
+    <rect x="0" y="0" width="460" height="450" class="screen"/>
+    <text x="230" y="40" class="title" text-anchor="middle">Crear Nuevo Evento</text>
+
+    <text x="40" y="80" class="label">Nombre del Evento:</text>
+    <rect x="40" y="90" width="380" height="30" class="field"/>
+
+    <text x="40" y="140" class="label">Fecha:</text>
+    <rect x="40" y="150" width="180" height="30" class="field"/>
+
+    <text x="240" y="140" class="label">Hora:</text>
+    <rect x="240" y="150" width="180" height="30" class="field"/>
+
+    <text x="40" y="200" class="label">Lugar:</text>
+    <rect x="40" y="210" width="380" height="30" class="field"/>
+
+    <text x="40" y="260" class="label">Descripción:</text>
+    <rect x="40" y="270" width="380" height="60" class="field"/>
+
+    <text x="40" y="350" class="label">Organizador:</text>
+    <rect x="40" y="360" width="380" height="30" class="field"/>
+
+    <rect x="280" y="410" width="100" height="40" class="button"/>
+    <text x="330" y="435" class="button-text">Cancelar</text>
+
+    <rect x="100" y="410" width="160" height="40" class="primary-button"/>
+    <text x="180" y="435" class="primary-button-text">Crear Evento</text>
+  </g>
+</svg>
